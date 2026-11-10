@@ -337,84 +337,171 @@
   <!-- =========================================================================
        SLIDE 6 — TECHNICAL IMPLEMENTATION
        ========================================================================= -->
+  <!-- =========================================================================
+       SLIDE 6 — TECHNICAL IMPLEMENTATION FLOW
+       ========================================================================= -->
   <section class="slide" id="slide-6">
     <div class="slide-content">
       <header class="slide-header">
         <div class="slide-title-group">
-          <span class="slide-tag">Architecture</span>
-          <h2 class="slide-title">Technical Implementation</h2>
-          <span class="slide-subtitle">Clean Flutter architecture, native branding, and robust quality assurance</span>
+          <span class="slide-tag">Architecture &amp; Flow</span>
+          <h2 class="slide-title">Technical Implementation Flow</h2>
+          <span class="slide-subtitle">Complete verified architecture pipeline from entry point through navigation to presentation &amp; assets</span>
         </div>
         <div class="slide-number">06 / 07</div>
       </header>
 
-      <div class="tech-grid">
-        <div class="card tech-column-card">
-          <div>
-            <h3 class="card-title"><span class="icon">🎨</span> UI &amp; Component Layer</h3>
-            <div class="tech-item">
-              <div class="tech-item-title">🧭 State-Preserving Navigation</div>
-              <div class="tech-item-text">
-                Uses <code>IndexedStack</code> wrapped in Material 3 <code>Scaffold</code> for instantaneous zero-latency tab switching while maintaining scroll offsets across Home, About, and Contact.
+      <div class="arch-layout">
+        <!-- Visual Architecture Flow Pipeline (Left Column) -->
+        <div class="arch-flow-column">
+          <!-- Stage 1: Application Entry Point -->
+          <div class="flow-stage">
+            <div class="arch-node highlight-entry">
+              <div class="arch-node-header">
+                <span class="arch-node-title">🚀 Application Entry Point</span>
+                <span class="arch-node-badge">lib/main.dart</span>
               </div>
+              <p class="arch-node-desc">
+                <code>main()</code> initializes Flutter &amp; runs <code>HerSpaceApp</code>. Root <code>MaterialApp</code> configures theme and launches <code>MainNavigation</code>.
+              </p>
             </div>
-            <div class="tech-item">
-              <div class="tech-item-title">✨ Reusable SoftCard Widget</div>
-              <div class="tech-item-text">
-                Standardized modular container with 20px rounded corners, subtle rose borders, and soft glowing elevation across all pages.
+          </div>
+
+          <div class="flow-connector">↓</div>
+
+          <!-- Stage 2: Application Configuration -->
+          <div class="flow-stage">
+            <div class="grid-2-nodes">
+              <div class="arch-node">
+                <div class="arch-node-header">
+                  <span class="arch-node-title">🌸 Design System</span>
+                  <span class="arch-node-badge">app_theme.dart</span>
+                </div>
+                <p class="arch-node-desc">
+                  Material 3 light theme from seed <code>#E8A7B8</code>, permanent AppBar theme &amp; warm plum ink text.
+                </p>
+              </div>
+
+              <div class="arch-node">
+                <div class="arch-node-header">
+                  <span class="arch-node-title">🗂️ Single Source of Truth</span>
+                  <span class="arch-node-badge">profile_data.dart</span>
+                </div>
+                <p class="arch-node-desc">
+                  Centralized constants for Qamar: full name, bio, quote, contact info, and 8 curated interests.
+                </p>
               </div>
             </div>
           </div>
-          <div class="tech-badges-row">
-            <span class="tech-badge">Material 3</span>
-            <span class="tech-badge">NavigationBar</span>
-            <span class="tech-badge">IndexedStack</span>
+
+          <div class="flow-connector">↓</div>
+
+          <!-- Stage 3: Main Navigation Layer -->
+          <div class="flow-stage">
+            <div class="arch-node">
+              <div class="arch-node-header">
+                <span class="arch-node-title">🧭 Main Navigation Controller</span>
+                <span class="arch-node-badge">main_navigation.dart</span>
+              </div>
+              <p class="arch-node-desc">
+                Stateful wrapper managing <code>IndexedStack</code> for zero-reload tab switching + Material 3 <code>NavigationBar</code> with active indicators.
+              </p>
+            </div>
+          </div>
+
+          <div class="flow-connector">↓</div>
+
+          <!-- Stage 4: Three Application Screens -->
+          <div class="flow-stage">
+            <div class="grid-3-nodes">
+              <div class="arch-node">
+                <div class="arch-node-header">
+                  <span class="arch-node-title">🏠 Home</span>
+                  <span class="arch-node-badge">home_page.dart</span>
+                </div>
+                <p class="arch-node-desc">
+                  Greeting, hero image, tagline card &amp; CTA to About.
+                </p>
+              </div>
+
+              <div class="arch-node">
+                <div class="arch-node-header">
+                  <span class="arch-node-title">👤 About</span>
+                  <span class="arch-node-badge">about_page.dart</span>
+                </div>
+                <p class="arch-node-desc">
+                  Avatar fallback, bio, quote &amp; 8 interest chips.
+                </p>
+              </div>
+
+              <div class="arch-node">
+                <div class="arch-node-header">
+                  <span class="arch-node-title">💌 Contact</span>
+                  <span class="arch-node-badge">contact_page.dart</span>
+                </div>
+                <p class="arch-node-desc">
+                  Email, phone, location &amp; social placeholders.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-connector">↓</div>
+
+          <!-- Stage 5: Reusable UI & Assets -->
+          <div class="flow-stage">
+            <div class="grid-2-nodes">
+              <div class="arch-node">
+                <div class="arch-node-header">
+                  <span class="arch-node-title">✨ Reusable Component</span>
+                  <span class="arch-node-badge">soft_card.dart</span>
+                </div>
+                <p class="arch-node-desc">
+                  Modular card with 24px rounded corners, white fill, and subtle rose elevation shadow.
+                </p>
+              </div>
+
+              <div class="arch-node">
+                <div class="arch-node-header">
+                  <span class="arch-node-title">📦 Assets &amp; Native Branding</span>
+                  <span class="arch-node-badge">pubspec.yaml</span>
+                </div>
+                <p class="arch-node-desc">
+                  Bundled illustrations, adaptive launcher icons, and warm cream native splash drawables.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="card tech-column-card">
-          <div>
-            <h3 class="card-title"><span class="icon">📦</span> Data &amp; Theme Architecture</h3>
-            <div class="tech-item">
-              <div class="tech-item-title">🗂️ Single Source of Truth</div>
-              <div class="tech-item-text">
-                <code>ProfileData</code> centralizes display name (<em>Qamar</em>), full name (<em>Nourhan Qamar</em>), bio narrative, quote, and 8 hobbies—eliminating hardcoded redundancy.
-              </div>
-            </div>
-            <div class="tech-item">
-              <div class="tech-item-title">🌸 Centralized Pastel Theming</div>
-              <div class="tech-item-text">
-                <code>AppTheme</code> governs light color schemes, custom AppBar styling with permanent "Her Space" title, and readable warm plum text.
-              </div>
-            </div>
+        <!-- Technical Annotations (Right Column) -->
+        <div class="arch-annotations-column">
+          <div class="annotation-card">
+            <div class="annotation-title">🎨 Material 3 Theming</div>
+            <p class="annotation-text">
+              Strictly light feminine pastel theme with seed color <code>#E8A7B8</code> and custom AppBar title. Absolutely zero dark or black elements.
+            </p>
           </div>
-          <div class="tech-badges-row">
-            <span class="tech-badge">ProfileData</span>
-            <span class="tech-badge">AppTheme</span>
-            <span class="tech-badge">Null Safety</span>
-          </div>
-        </div>
 
-        <div class="card tech-column-card">
-          <div>
-            <h3 class="card-title"><span class="icon">📱</span> Native Branding &amp; QA</h3>
-            <div class="tech-item">
-              <div class="tech-item-title">🎀 Adaptive Icon &amp; Splash</div>
-              <div class="tech-item-text">
-                Custom floral-heart master icon, adaptive Android foreground/background, and Android 12 native splash screen forced to warm cream `#FFF9F7`.
-              </div>
-            </div>
-            <div class="tech-item">
-              <div class="tech-item-title">✅ Multi-Platform Verification</div>
-              <div class="tech-item-text">
-                Clean <code>flutter analyze</code> (0 warnings), automated widget tests, and production builds for Web PWA and physical Samsung Galaxy S25 (Android 17).
-              </div>
-            </div>
+          <div class="annotation-card">
+            <div class="annotation-title">⚡ Stateful Navigation</div>
+            <p class="annotation-text">
+              <code>IndexedStack</code> retains all three screens in the widget tree, preserving scroll offsets and eliminating reload latency.
+            </p>
           </div>
-          <div class="tech-badges-row">
-            <span class="tech-badge">Android 17</span>
-            <span class="tech-badge">Web PWA</span>
-            <span class="tech-badge">0 Lint Errors</span>
+
+          <div class="annotation-card">
+            <div class="annotation-title">🧩 Clean Modular Decoupling</div>
+            <p class="annotation-text">
+              Clear separation between data (<code>lib/data/</code>), theme (<code>lib/theme/</code>), screens (<code>lib/screens/</code>), and widgets (<code>lib/widgets/</code>).
+            </p>
+          </div>
+
+          <div class="annotation-card">
+            <div class="annotation-title">✅ Verified Cross-Platform</div>
+            <p class="annotation-text">
+              Tested on Android 17 (Samsung Galaxy S25) and Web PWA. Clean static analysis with 0 lint warnings and 100% test pass rate.
+            </p>
           </div>
         </div>
       </div>
@@ -422,93 +509,119 @@
   </section>
 
   <!-- =========================================================================
-       SLIDE 7 — REPOSITORY & SUBMISSION
+       SLIDE 7 — REPOSITORY & ACADEMIC SUBMISSION
        ========================================================================= -->
   <section class="slide" id="slide-7">
     <div class="slide-content">
       <header class="slide-header">
         <div class="slide-title-group">
-          <span class="slide-tag">Project Submission</span>
+          <span class="slide-tag">Academic Submission</span>
           <h2 class="slide-title">Repository &amp; Academic Submission</h2>
-          <span class="slide-subtitle">Official deliverable for AI 413 — Interactive Systems Design</span>
+          <span class="slide-subtitle">Delta University for Science and Technology • Faculty of Artificial Intelligence</span>
         </div>
         <div class="slide-number">07 / 07</div>
       </header>
 
       <div class="submission-layout">
-        <div class="card repo-card">
+        <!-- Academic Profile & Closing (Left Column) -->
+        <div class="card academic-profile-card">
           <div>
-            <h3 class="card-title"><span class="icon">📦</span> Project Repository Details</h3>
-            <p class="card-text">
-              The complete Her Space Flutter application codebase, native assets, automated tests, and presentation source are maintained in the project repository:
-            </p>
-
-            <div class="repo-url-highlight">
-              <div class="repo-label">GitHub Repository URL</div>
-              <div class="repo-url-text" id="repo-url-display">REPOSITORY_URL_TO_BE_ADDED</div>
+            <div class="profile-hero-box">
+              <img src="assets/branding/logo.png" alt="Her Space Floral Heart Logo" class="profile-hero-logo">
+              <div class="profile-hero-titles">
+                <span class="profile-hero-title">Her Space</span>
+                <span class="profile-hero-tagline">“A little space for all things lovely.”</span>
+                <span class="profile-closing-badge">Designed with care. Built with Flutter.</span>
+              </div>
             </div>
 
-            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">
-              <em>Note: The repository URL placeholder is configured in <code>presentation/config.json</code> and will be updated upon repository publishing.</em>
-            </p>
+            <div class="academic-info-list">
+              <div class="academic-info-item">
+                <span class="academic-info-label">University</span>
+                <span class="academic-info-value">Delta University for Science and Technology</span>
+              </div>
+              <div class="academic-info-item">
+                <span class="academic-info-label">Faculty</span>
+                <span class="academic-info-value">Faculty of Artificial Intelligence</span>
+              </div>
+              <div class="academic-info-item">
+                <span class="academic-info-label">Course</span>
+                <span class="academic-info-value">AI 413 — Interactive Systems Design</span>
+              </div>
+              <div class="academic-info-item">
+                <span class="academic-info-label">Student</span>
+                <span class="academic-info-value">Nourhan Qamar (Qamar)</span>
+              </div>
+              <div class="academic-info-item">
+                <span class="academic-info-label">Technology</span>
+                <span class="academic-info-value">Flutter 3 • Dart 3 • Material 3</span>
+              </div>
+              <div class="academic-info-item">
+                <span class="academic-info-label">Platforms</span>
+                <span class="academic-info-value">Android (Mobile) &amp; Web</span>
+              </div>
+            </div>
           </div>
 
-          <div style="background: #FFFFFF; border: 1px solid var(--card-border); border-radius: 14px; padding: 1.5vh 1.4vw;">
-            <div style="font-size: 0.82rem; font-weight: 700; color: var(--rose-primary); margin-bottom: 4px;">Quick Run Commands (PowerShell)</div>
-            <code style="display: block; font-family: monospace; font-size: 0.8rem; color: var(--rose-primary); line-height: 1.6;">
-              git clone &lt;repo-url&gt; &amp;&amp; cd her_space<br>
-              flutter pub get<br>
-              flutter run -d chrome &nbsp;# or flutter run -d &lt;device-id&gt;
-            </code>
+          <div style="font-size: 0.76rem; color: var(--text-muted); text-align: center; border-top: 1px solid var(--card-border); padding-top: 1vh;">
+            Academic Submission • Level 4, Semester 1 • Fall 2026
           </div>
         </div>
 
-        <div class="card checklist-card">
-          <h3 class="card-title"><span class="icon">📋</span> Submission Summary</h3>
-          <ul>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Course:</strong> AI 413 Interactive Systems Design
+        <!-- GitHub Repository & Delivery (Right Column) -->
+        <div class="card repo-card">
+          <div>
+            <div class="repo-target-box">
+              <div class="repo-target-item">
+                <span class="repo-target-label">Repository Owner</span>
+                <span class="repo-target-value">Qamar</span>
               </div>
-            </li>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Student:</strong> Nourhan Qamar (Qamar)
+              <div class="repo-target-item" style="text-align: right;">
+                <span class="repo-target-label">Planned Repository</span>
+                <span class="repo-target-value">her-space-flutter</span>
               </div>
-            </li>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Three Pages:</strong> Home, About, Contact
-              </div>
-            </li>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Design System:</strong> Pastel pink &amp; warm cream
-              </div>
-            </li>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Branding:</strong> Floral heart icon &amp; native splash
-              </div>
-            </li>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>Verification:</strong> Android 17 &amp; Web builds passed
-              </div>
-            </li>
-            <li>
-              <span class="check-icon">✓</span>
-              <div>
-                <strong>No Dark Elements:</strong> Strict light feminine palette
-              </div>
-            </li>
-          </ul>
+            </div>
+
+            <div class="repo-url-highlight">
+              <div class="repo-label">Official GitHub Repository URL</div>
+              <div class="repo-url-text" id="repo-url-display">REPOSITORY_URL_TO_BE_ADDED</div>
+              <div class="repo-url-note">Single source of truth: presentation/config.json • Updated upon publication</div>
+            </div>
+
+            <div class="checklist-card">
+              <ul>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Three distinct pages (Home, About, Contact)</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Single source of truth profile data (<code>ProfileData</code>)</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Strict feminine pastel palette (No black elements)</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>100% tests &amp; static analysis passed (0 lint warnings)</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Custom launcher icon &amp; Android 12 native splash screen</span>
+                </li>
+                <li>
+                  <span class="check-icon">✓</span>
+                  <span>Reproducible academic presentation PDF &amp; documentation</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="terminal-command-box">
+            <span style="font-size: 0.72rem; font-weight: 700; color: var(--dusty-rose); text-transform: uppercase;">Run:</span>
+            <span class="terminal-command-code">git clone &lt;repo-url&gt; &amp;&amp; cd her_space &amp;&amp; flutter run</span>
+          </div>
         </div>
       </div>
     </div>

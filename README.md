@@ -259,6 +259,8 @@ To update the repository URL in the presentation prior to final submission:
 
 ## Academic Context
 
+- **University:** Delta University for Science and Technology
+- **Faculty:** Faculty of Artificial Intelligence
 - **Course:** AI 413 — Interactive Systems Design
 - **Academic Level:** Level 4, Semester 1
 - **Student / Profile:** Nourhan Qamar (*Qamar*)

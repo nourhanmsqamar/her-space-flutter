@@ -36,12 +36,12 @@ Write-Host "Repository URL: $repoUrl" -ForegroundColor Cyan
 
 # 3. Synchronize repository URL in index.html if needed
 $htmlContent = Get-Content $htmlPath -Raw -Encoding UTF8
-$pattern = 'id="repo-url-display">([^<]*)</span>'
-if ($htmlContent -match $pattern) {
+$pattern = 'id="repo-url-display">([^<]*)<(?:span|div)>'
+if ($htmlContent -match 'id="repo-url-display">([^<]*)<') {
     $currentUrlInHtml = $matches[1]
     if ($currentUrlInHtml -ne $repoUrl) {
         Write-Host "Updating repository URL in index.html to: $repoUrl" -ForegroundColor Yellow
-        $newHtml = $htmlContent -replace 'id="repo-url-display">([^<]*)</span>', "id=`"repo-url-display`">$repoUrl</span>"
+        $newHtml = $htmlContent -replace 'id="repo-url-display">([^<]*)<', "id=`"repo-url-display`">$repoUrl<"
         Set-Content -Path $htmlPath -Value $newHtml -Encoding UTF8
     }
 }
@@ -97,3 +97,4 @@ if (Test-Path $outPdfPath) {
     Write-Error "PDF generation failed. Output file was not created."
     exit 1
 }
+

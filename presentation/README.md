@@ -20,8 +20,8 @@ This directory contains the source code, design assets, and automated generation
 3. **Design Identity & System:** Complete color palette with hex values, typography pairings, floral emblem symbolism, and core design principles.
 4. **Home & About Me:** High-resolution live application captures inside mobile mockups, highlighting the welcome greeting, hero illustration, bio narrative, quote card, and 8 interest chips.
 5. **Contact & Navigation:** Live application capture of the contact screen, email and phone cards, non-interactive social placeholder badges, bottom navigation architecture, and a public privacy notice.
-6. **Technical Architecture:** Clean modular project structure, state-preserving `IndexedStack` navigation, centralized `ProfileData` model, custom pastel `AppTheme`, native splash screen, and multi-platform verification.
-7. **Repository & Academic Submission:** Visually prominent GitHub repository URL placeholder, course metadata, submission checklist, and quick PowerShell commands for cloning and running.
+6. **Technical Implementation Flow:** Visual 5-stage architecture pipeline (Entry Point `main.dart` → Configuration `AppTheme`/`ProfileData` → Navigation `MainNavigation` → 3 Screens → Reusable `SoftCard` & Assets), complemented by technical annotations covering Material 3 theming, stateful `IndexedStack` routing, and cross-platform verification.
+7. **Repository & Academic Submission:** Official submission deliverable for Delta University for Science and Technology (Faculty of Artificial Intelligence, AI 413), student Nourhan Qamar (*Qamar*), planned repository `her-space-flutter`, prominent configurable repository URL placeholder, closing statement (*Designed with care. Built with Flutter.*), and submission verification checklist.
 
 ---
 
@@ -85,3 +85,4 @@ The script will automatically:
 - **Primary Typography & Accents:** Deep Soft Rose (`#B85F7B`) and Dusty Rose (`#D98EAA`).
 - **Body Text:** Warm Plum Ink (`#5A3D49`) — strictly avoiding harsh `#000000` or dark gray.
 - **Font Families:** *Playfair Display* (headings), *Plus Jakarta Sans* / *Inter* (body text).
+
