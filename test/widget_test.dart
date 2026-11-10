@@ -3,7 +3,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:her_space/main.dart';
 
 void main() {
-  testWidgets('Her Space personal-data consistency and navigation test',
+  testWidgets('Her Space branding, permanent AppBar, and navigation test',
       (WidgetTester tester) async {
     // Set a realistic mobile viewport
     tester.view.physicalSize = const Size(1080, 2400);
@@ -15,8 +15,8 @@ void main() {
 
     await tester.pumpWidget(const HerSpaceApp());
 
-    // 1. Home Page Verification
-    expect(find.text('Home'), findsWidgets);
+    // 1. Home Page Verification with Permanent AppBar title
+    expect(find.text('Her Space'), findsOneWidget);
     expect(find.text('Welcome to Qamar’s space ✨'), findsOneWidget);
     expect(find.text('Curious Mind, Kind Heart, Endless Possibilities.'),
         findsOneWidget);
@@ -27,7 +27,8 @@ void main() {
     await tester.tap(find.text('Explore About Me'));
     await tester.pumpAndSettle();
 
-    // Verify About Page Content
+    // Verify Permanent AppBar and About Page Content
+    expect(find.text('Her Space'), findsOneWidget);
     expect(find.text('About Me'), findsOneWidget);
     expect(find.text('Qamar'), findsOneWidget);
     expect(find.text('Nourhan Qamar'), findsOneWidget);
@@ -52,7 +53,8 @@ void main() {
     await tester.tap(find.text('Get in Touch'));
     await tester.pumpAndSettle();
 
-    // Verify Contact Page Content
+    // Verify Permanent AppBar and Contact Page Content
+    expect(find.text('Her Space'), findsOneWidget);
     expect(find.text('Contact'), findsWidgets);
     expect(find.text('Let’s stay connected'), findsOneWidget);
     expect(find.text('Email'), findsOneWidget);
@@ -69,17 +71,20 @@ void main() {
     // 4. Test bottom navigation bar back to Home
     await tester.tap(find.text('Home').last);
     await tester.pumpAndSettle();
+    expect(find.text('Her Space'), findsOneWidget);
     expect(find.text('Welcome to Qamar’s space ✨'), findsOneWidget);
 
     // 5. Test bottom navigation directly to About
     await tester.tap(find.text('About').last);
     await tester.pumpAndSettle();
+    expect(find.text('Her Space'), findsOneWidget);
     expect(find.text('About Me'), findsOneWidget);
     expect(find.text('Qamar'), findsOneWidget);
 
     // 6. Test bottom navigation directly to Contact
     await tester.tap(find.text('Contact').last);
     await tester.pumpAndSettle();
+    expect(find.text('Her Space'), findsOneWidget);
     expect(find.text('NorhanQamar@gmail.com'), findsOneWidget);
   });
 }

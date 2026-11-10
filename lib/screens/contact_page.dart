@@ -10,7 +10,7 @@ class ContactPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Contact'),
+        title: const Text('Her Space'),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 20),
@@ -27,6 +27,12 @@ class ContactPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const Text('Contact',
+                      style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w800,
+                          color: AppTheme.rose)),
+                  const SizedBox(height: 6),
                   const Text('Let’s stay connected',
                       style:
                           TextStyle(fontSize: 25, fontWeight: FontWeight.w800)),

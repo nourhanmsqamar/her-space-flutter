@@ -24,13 +24,14 @@ class AppTheme {
       scaffoldBackgroundColor: cream,
       appBarTheme: const AppBarTheme(
         backgroundColor: cream,
-        foregroundColor: ink,
+        foregroundColor: rose,
         elevation: 0,
         centerTitle: false,
         titleTextStyle: TextStyle(
-          color: ink,
-          fontSize: 21,
-          fontWeight: FontWeight.w700,
+          color: rose,
+          fontSize: 22,
+          fontWeight: FontWeight.w800,
+          letterSpacing: 0.3,
         ),
       ),
       textTheme: ThemeData.light().textTheme.apply(

@@ -4,7 +4,7 @@
     "start_url": ".",
     "display": "standalone",
     "background_color": "#FFF9F7",
-    "theme_color": "#E8A7B8",
+    "theme_color": "#E8A8BF",
     "description": "A soft, girly personal space Flutter assignment.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,

@@ -11,7 +11,7 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('About Me'),
+        title: const Text('Her Space'),
         actions: const [
           Padding(
             padding: EdgeInsets.only(right: 20),
@@ -27,6 +27,12 @@ class AboutPage extends StatelessWidget {
               padding: const EdgeInsets.fromLTRB(22, 12, 22, 28),
               child: Column(
                 children: [
+                  const Text('About Me',
+                      style: TextStyle(
+                          fontSize: 22,
+                          fontWeight: FontWeight.w800,
+                          color: AppTheme.rose)),
+                  const SizedBox(height: 14),
                   // Profile Photo / Avatar (Supports assets/images/profile.png with graceful fallback)
                   Container(
                     width: 116,
