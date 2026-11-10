@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Her Space — Academic Project Presentation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       SLIDE 1 — COVER
+       ========================================================================= -->
+  <section class="slide cover-slide" id="slide-1">
+    <div class="slide-content">
+      <div class="cover-container">
+        <div class="cover-logo-wrapper">
+          <img src="assets/branding/logo.png" alt="Her Space Floral Heart Logo" class="cover-logo">
+        </div>
+        <div class="cover-badge">Academic Project Presentation</div>
+        <h1 class="cover-title">Her Space</h1>
+        <div class="cover-subtitle">A little space for all things lovely.</div>
+        <p class="cover-description">
+          A personalized, feminine digital sanctuary designed with Flutter and Material 3.
+          Blending intentional interaction design, responsive layouts, and a warm pastel visual identity.
+        </p>
+        <div class="cover-meta">
+          <div class="meta-item">
+            <span class="meta-label">Course</span>
+            <span class="meta-value">AI 413 — Interactive Systems Design</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Student</span>
+            <span class="meta-value">Nourhan Qamar (Qamar)</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Technology</span>
+            <span class="meta-value">Flutter 3 &amp; Material 3</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Target Platforms</span>
+            <span class="meta-value">Android (Mobile) &amp; Web</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SLIDE 2 — PROJECT OVERVIEW
+       ========================================================================= -->
+  <section class="slide" id="slide-2">
+    <div class="slide-content">
+      <header class="slide-header">
+        <div class="slide-title-group">
+          <span class="slide-tag">Project Overview</span>
+          <h2 class="slide-title">Concept, Purpose &amp; Structure</h2>
+          <span class="slide-subtitle">A serene personal digital haven crafted for university submission</span>
+        </div>
+        <div class="slide-number">02 / 07</div>
+      </header>
+
+      <div class="grid-3">
+        <div class="card overview-card">
+          <div class="overview-icon-box">🌸</div>
+          <h3 class="card-title">Concept &amp; Vision</h3>
+          <p class="card-text">
+            <strong>Her Space</strong> is a personal portfolio and digital sanctuary designed to express identity, creativity, and thoughtful interaction.
+          </p>
+          <ul>
+            <li>Feminine, soft, and minimal visual atmosphere.</li>
+            <li>Calming, clutter-free user experience.</li>
+            <li>Gentle pastel tones replacing stark high-contrast darks.</li>
+            <li>Warm, welcoming space that feels uniquely personal.</li>
+          </ul>
+        </div>
+
+        <div class="card overview-card">
+          <div class="overview-icon-box">✨</div>
+          <h3 class="card-title">Purpose &amp; Objective</h3>
+          <p class="card-text">
+            Built as part of <em>AI 413 Interactive Systems Design</em>, fulfilling all core and advanced assignment criteria:
+          </p>
+          <ul>
+            <li>Multi-screen navigation architecture with persistent state.</li>
+            <li>Personalized profile data for Nourhan Qamar.</li>
+            <li>Harmonious typography and Material 3 design tokens.</li>
+            <li>Production-ready Android and Web cross-platform support.</li>
+          </ul>
+        </div>
+
+        <div class="card overview-card">
+          <div class="overview-icon-box">📱</div>
+          <h3 class="card-title">Core Sections</h3>
+          <p class="card-text">
+            The application is thoughtfully divided into three cohesive, dedicated destinations:
+          </p>
+          <ul>
+            <li><strong>Home:</strong> Welcoming greeting, hero illustration, and quick call to action.</li>
+            <li><strong>About Me:</strong> Portrait, biography, inspiring quote, and 8 interest chips.</li>
+            <li><strong>Contact:</strong> Direct communication cards and social placeholder badges.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SLIDE 3 — DESIGN IDENTITY
+       ========================================================================= -->
+  <section class="slide" id="slide-3">
+    <div class="slide-content">
+      <header class="slide-header">
+        <div class="slide-title-group">
+          <span class="slide-tag">Visual Identity</span>
+          <h2 class="slide-title">Design System &amp; Color Palette</h2>
+          <span class="slide-subtitle">A strictly soft, feminine aesthetic with absolutely zero black elements</span>
+        </div>
+        <div class="slide-number">03 / 07</div>
+      </header>
+
+      <div class="design-layout">
+        <div class="card">
+          <h3 class="card-title"><span class="icon">🎨</span> Curated Color Palette</h3>
+          <p class="card-text">
+            The design deliberately avoids stark black (#000000) or dark charcoal tones, relying entirely on gentle rose, cream, and warm plum hues for depth and contrast.
+          </p>
+
+          <div class="palette-grid">
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #FFF9F7;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Warm Cream</div>
+                <div class="swatch-hex">#FFF9F7</div>
+              </div>
+            </div>
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #FFEAF0;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Pale Pink</div>
+                <div class="swatch-hex">#FFEAF0</div>
+              </div>
+            </div>
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #F8DDE8;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Soft Blush</div>
+                <div class="swatch-hex">#F8DDE8</div>
+              </div>
+            </div>
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #D98EAA;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Dusty Rose</div>
+                <div class="swatch-hex">#D98EAA</div>
+              </div>
+            </div>
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #B85F7B;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Deep Soft Rose</div>
+                <div class="swatch-hex">#B85F7B</div>
+              </div>
+            </div>
+            <div class="swatch-card">
+              <div class="swatch-color" style="background-color: #E8A8BF;"></div>
+              <div class="swatch-info">
+                <div class="swatch-name">Light Rose</div>
+                <div class="swatch-hex">#E8A8BF</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3 class="card-title"><span class="icon">✨</span> Design Principles</h3>
+          <div class="principles-list">
+            <div class="principle-item">
+              <span class="principle-bullet">🌿</span>
+              <div>
+                <div class="principle-title">Gentle &amp; Calming</div>
+                <div class="principle-desc">Rounded corners (18–28px), soft shadows, and generous breathing room.</div>
+              </div>
+            </div>
+            <div class="principle-item">
+              <span class="principle-bullet">🌷</span>
+              <div>
+                <div class="principle-title">Feminine &amp; Personal</div>
+                <div class="principle-desc">Custom floral-heart emblem reflecting warmth, growth, and love of learning.</div>
+              </div>
+            </div>
+            <div class="principle-item">
+              <span class="principle-bullet">📖</span>
+              <div>
+                <div class="principle-title">Thoughtful Typography</div>
+                <div class="principle-desc">Expressive serif headings balanced by ultra-legible sans-serif text in warm ink (#49363D).</div>
+              </div>
+            </div>
+            <div class="principle-item">
+              <span class="principle-bullet">🤍</span>
+              <div>
+                <div class="principle-title">Accessibility &amp; Warmth</div>
+                <div class="principle-desc">High legibility without harsh eye-strain or cold monochrome styling.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SLIDE 4 — HOME & ABOUT SCREENS
+       ========================================================================= -->
+  <section class="slide" id="slide-4">
+    <div class="slide-content">
+      <header class="slide-header">
+        <div class="slide-title-group">
+          <span class="slide-tag">Interface Design</span>
+          <h2 class="slide-title">Home &amp; About Me Screens</h2>
+          <span class="slide-subtitle">Verified live application captures showcasing responsive layouts and rich profile content</span>
+        </div>
+        <div class="slide-number">04 / 07</div>
+      </header>
+
+      <div class="dual-showcase-layout">
+        <!-- Phone Mockup 1: Home -->
+        <div class="phone-mockup small">
+          <div class="phone-screen">
+            <img src="assets/screenshots/home.png" alt="Her Space Home Screen Live Capture">
+          </div>
+        </div>
+
+        <!-- Phone Mockup 2: About Me -->
+        <div class="phone-mockup small">
+          <div class="phone-screen">
+            <img src="assets/screenshots/about.png" alt="Her Space About Me Screen Live Capture">
+          </div>
+        </div>
+
+        <!-- Feature Explanations -->
+        <div class="feature-cards-column">
+          <div class="card">
+            <h3 class="card-title"><span class="icon">🏠</span> Home Screen Experience</h3>
+            <p class="card-text">
+              Presents an immediate, warm welcome greeting customized for <strong>Qamar</strong> with an embedded hero illustration and personal tagline.
+            </p>
+            <div>
+              <span class="feature-pill">✨ Auto-Awesome Icon</span>
+              <span class="feature-pill">🖼️ Hero Illustration</span>
+              <span class="feature-pill">💖 Explore CTA Button</span>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title"><span class="icon">👤</span> About Me Profile</h3>
+            <p class="card-text">
+              Features a circular portrait with soft-glow border, full name (<strong>Nourhan Qamar</strong>), bio narrative, inspirational quote card, and eight curated interest chips.
+            </p>
+            <div>
+              <span class="feature-pill">📚 8 Interest Tags</span>
+              <span class="feature-pill">💬 Quote Card</span>
+              <span class="feature-pill">💌 Direct Contact Action</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SLIDE 5 — CONTACT & NAVIGATION
+       ========================================================================= -->
+  <section class="slide" id="slide-5">
+    <div class="slide-content">
+      <header class="slide-header">
+        <div class="slide-title-group">
+          <span class="slide-tag">Interaction &amp; Contact</span>
+          <h2 class="slide-title">Contact Channels &amp; Navigation</h2>
+          <span class="slide-subtitle">Structured communication channels and seamless bottom navigation</span>
+        </div>
+        <div class="slide-number">05 / 07</div>
+      </header>
+
+      <div class="showcase-layout">
+        <!-- Phone Mockup: Contact -->
+        <div class="phone-mockup">
+          <div class="phone-screen">
+            <img src="assets/screenshots/contact.png" alt="Her Space Contact Screen Live Capture">
+          </div>
+        </div>
+
+        <!-- Feature Explanations -->
+        <div class="feature-cards-column">
+          <div class="card">
+            <h3 class="card-title"><span class="icon">💌</span> Contact Touchpoints</h3>
+            <p class="card-text">
+              Provides dedicated interactive tiles for direct communication:
+            </p>
+            <div style="margin-top: 1vh; display: flex; flex-direction: column; gap: 0.8vh;">
+              <div style="font-size: 0.86rem; color: var(--text-primary);">
+                <strong>Email:</strong> <span style="color: var(--rose-primary);">NorhanQamar@gmail.com</span>
+              </div>
+              <div style="font-size: 0.86rem; color: var(--text-primary);">
+                <strong>Phone:</strong> <span style="color: var(--rose-primary);">01020304050</span>
+              </div>
+              <div style="font-size: 0.86rem; color: var(--text-primary);">
+                <strong>Location:</strong> <span style="color: var(--rose-primary);">Kafrelshiekh, Egypt</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="card-title"><span class="icon">🌐</span> Social Badges &amp; Navigation</h3>
+            <p class="card-text">
+              Features non-interactive placeholder badges for Instagram, LinkedIn, and GitHub ("Profiles will be connected soon ♡").
+              A persistent Material 3 <code>NavigationBar</code> provides instant, indexed switching between all three destinations without loss of scroll state.
+            </p>
+          </div>
+
+          <!-- Privacy Alert Box -->
+          <div class="privacy-alert-box">
+            <div class="icon">🔒</div>
+            <div>
+              <div class="privacy-alert-title">Privacy &amp; Public Publication Note</div>
+              <div class="privacy-alert-text">
+                Personal contact details (email and phone) are included for academic evaluation.
+                Before publishing the repository publicly, the owner may sanitize or replace them in <code>lib/data/profile_data.dart</code>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SLIDE 6 — TECHNICAL IMPLEMENTATION
+       ========================================================================= -->
+  <section class="slide" id="slide-6">
+    <div class="slide-content">
+      <header class="slide-header">
+        <div class="slide-title-group">
+          <span class="slide-tag">Architecture</span>
+          <h2 class="slide-title">Technical Implementation</h2>
+          <span class="slide-subtitle">Clean Flutter architecture, native branding, and robust quality assurance</span>
+        </div>
+        <div class="slide-number">06 / 07</div>
+      </header>
+
+      <div class="tech-grid">
+        <div class="card tech-column-card">
+          <div>
+            <h3 class="card-title"><span class="icon">🎨</span> UI &amp; Component Layer</h3>
+            <div class="tech-item">
+              <div class="tech-item-title">🧭 State-Preserving Navigation</div>
+              <div class="tech-item-text">
+                Uses <code>IndexedStack</code> wrapped in Material 3 <code>Scaffold</code> for instantaneous zero-latency tab switching while maintaining scroll offsets across Home, About, and Contact.
+              </div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-item-title">✨ Reusable SoftCard Widget</div>
+              <div class="tech-item-text">
+                Standardized modular container with 20px rounded corners, subtle rose borders, and soft glowing elevation across all pages.
+              </div>
+            </div>
+          </div>
+          <div class="tech-badges-row">
+            <span class="tech-badge">Material 3</span>
+            <span class="tech-badge">NavigationBar</span>
+            <span class="tech-badge">IndexedStack</span>
+          </div>
+        </div>
+
+        <div class="card tech-column-card">
+          <div>
+            <h3 class="card-title"><span class="icon">📦</span> Data &amp; Theme Architecture</h3>
+            <div class="tech-item">
+              <div class="tech-item-title">🗂️ Single Source of Truth</div>
+              <div class="tech-item-text">
+                <code>ProfileData</code> centralizes display name (<em>Qamar</em>), full name (<em>Nourhan Qamar</em>), bio narrative, quote, and 8 hobbies—eliminating hardcoded redundancy.
+              </div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-item-title">🌸 Centralized Pastel Theming</div>
+              <div class="tech-item-text">
+                <code>AppTheme</code> governs light color schemes, custom AppBar styling with permanent "Her Space" title, and readable warm plum text.
+              </div>
+            </div>
+          </div>
+          <div class="tech-badges-row">
+            <span class="tech-badge">ProfileData</span>
+            <span class="tech-badge">AppTheme</span>
+            <span class="tech-badge">Null Safety</span>
+          </div>
+        </div>
+
+        <div class="card tech-column-card">
+          <div>
+            <h3 class="card-title"><span class="icon">📱</span> Native Branding &amp; QA</h3>
+            <div class="tech-item">
+              <div class="tech-item-title">🎀 Adaptive Icon &amp; Splash</div>
+              <div class="tech-item-text">
+                Custom floral-heart master icon, adaptive Android foreground/background, and Android 12 native splash screen forced to warm cream `#FFF9F7`.
+              </div>
+            </div>
+            <div class="tech-item">
+              <div class="tech-item-title">✅ Multi-Platform Verification</div>
+              <div class="tech-item-text">
+                Clean <code>flutter analyze</code> (0 warnings), automated widget tests, and production builds for Web PWA and physical Samsung Galaxy S25 (Android 17).
+              </div>
+            </div>
+          </div>
+          <div class="tech-badges-row">
+            <span class="tech-badge">Android 17</span>
+            <span class="tech-badge">Web PWA</span>
+            <span class="tech-badge">0 Lint Errors</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       SLIDE 7 — REPOSITORY & SUBMISSION
+       ========================================================================= -->
+  <section class="slide" id="slide-7">
+    <div class="slide-content">
+      <header class="slide-header">
+        <div class="slide-title-group">
+          <span class="slide-tag">Project Submission</span>
+          <h2 class="slide-title">Repository &amp; Academic Submission</h2>
+          <span class="slide-subtitle">Official deliverable for AI 413 — Interactive Systems Design</span>
+        </div>
+        <div class="slide-number">07 / 07</div>
+      </header>
+
+      <div class="submission-layout">
+        <div class="card repo-card">
+          <div>
+            <h3 class="card-title"><span class="icon">📦</span> Project Repository Details</h3>
+            <p class="card-text">
+              The complete Her Space Flutter application codebase, native assets, automated tests, and presentation source are maintained in the project repository:
+            </p>
+
+            <div class="repo-url-highlight">
+              <div class="repo-label">GitHub Repository URL</div>
+              <div class="repo-url-text" id="repo-url-display">REPOSITORY_URL_TO_BE_ADDED</div>
+            </div>
+
+            <p class="card-text" style="font-size: 0.85rem; color: var(--text-muted);">
+              <em>Note: The repository URL placeholder is configured in <code>presentation/config.json</code> and will be updated upon repository publishing.</em>
+            </p>
+          </div>
+
+          <div style="background: #FFFFFF; border: 1px solid var(--card-border); border-radius: 14px; padding: 1.5vh 1.4vw;">
+            <div style="font-size: 0.82rem; font-weight: 700; color: var(--rose-primary); margin-bottom: 4px;">Quick Run Commands (PowerShell)</div>
+            <code style="display: block; font-family: monospace; font-size: 0.8rem; color: var(--rose-primary); line-height: 1.6;">
+              git clone &lt;repo-url&gt; &amp;&amp; cd her_space<br>
+              flutter pub get<br>
+              flutter run -d chrome &nbsp;# or flutter run -d &lt;device-id&gt;
+            </code>
+          </div>
+        </div>
+
+        <div class="card checklist-card">
+          <h3 class="card-title"><span class="icon">📋</span> Submission Summary</h3>
+          <ul>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Course:</strong> AI 413 Interactive Systems Design
+              </div>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Student:</strong> Nourhan Qamar (Qamar)
+              </div>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Three Pages:</strong> Home, About, Contact
+              </div>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Design System:</strong> Pastel pink &amp; warm cream
+              </div>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Branding:</strong> Floral heart icon &amp; native splash
+              </div>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>Verification:</strong> Android 17 &amp; Web builds passed
+              </div>
+            </li>
+            <li>
+              <span class="check-icon">✓</span>
+              <div>
+                <strong>No Dark Elements:</strong> Strict light feminine palette
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script to dynamically load repository URL from config.json -->
+  <script>
+    (function() {
+      fetch('config.json')
+        .then(response => response.json())
+        .then(config => {
+          if (config && config.repositoryUrl) {
+            const displayEl = document.getElementById('repo-url-display');
+            if (displayEl) {
+              displayEl.textContent = config.repositoryUrl;
+            }
+          }
+        })
+        .catch(err => {
+          // If running locally without a web server, fallback to default in HTML
+          console.log('Using default repository URL config placeholder.');
+        });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,690 @@
+/* ==========================================================================
+   HER SPACE — ACADEMIC PRESENTATION STYLESHEET
+   Strict Feminine Pastel Identity — Absolutely No Black Elements
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --cream: #FFF9F7;
+  --pale-pink: #FFEAF0;
+  --soft-blush: #F8DDE8;
+  --blush-accent: #E8A8BF;
+  --dusty-rose: #D98EAA;
+  --rose-primary: #B85F7B;
+  --rose-deep: #9E4B66;
+  --text-primary: #5A3D49;
+  --text-muted: #8A6473;
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --card-border: #F3D3DF;
+  --shadow-soft: 0 12px 36px rgba(184, 95, 123, 0.08);
+  --shadow-card: 0 8px 24px rgba(217, 142, 170, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--cream);
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==========================================================================
+   SLIDE LAYOUT (16:9 Landscape)
+   ========================================================================== */
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  position: relative;
+  background-color: var(--cream);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 5vh 5vw;
+  page-break-after: always;
+  break-after: page;
+}
+
+/* Background delicate decorative circles */
+.slide::before {
+  content: '';
+  position: absolute;
+  top: -12vw;
+  right: -10vw;
+  width: 32vw;
+  height: 32vw;
+  background: radial-gradient(circle, var(--pale-pink) 0%, rgba(255, 249, 247, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.slide::after {
+  content: '';
+  position: absolute;
+  bottom: -15vw;
+  left: -8vw;
+  width: 35vw;
+  height: 35vw;
+  background: radial-gradient(circle, var(--soft-blush) 0%, rgba(255, 249, 247, 0) 70%);
+  border-radius: 50%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.slide-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Slide Header */
+.slide-header {
+  margin-bottom: 3.5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-bottom: 2px solid var(--pale-pink);
+  padding-bottom: 1.8vh;
+}
+
+.slide-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.slide-tag {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--rose-primary);
+  margin-bottom: 0.4vh;
+}
+
+.slide-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--rose-primary);
+  letter-spacing: -0.5px;
+}
+
+.slide-subtitle {
+  font-size: 0.96rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.slide-number {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--dusty-rose);
+  opacity: 0.7;
+}
+
+/* ==========================================================================
+   CARDS & CONTAINERS
+   ========================================================================== */
+
+.card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: 20px;
+  padding: 2.8vh 2.2vw;
+  box-shadow: var(--shadow-card);
+  backdrop-filter: blur(10px);
+}
+
+.card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--rose-primary);
+  margin-bottom: 1.2vh;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-title .icon {
+  font-size: 1.3rem;
+  color: var(--dusty-rose);
+}
+
+.card-text {
+  font-size: 0.92rem;
+  line-height: 1.62;
+  color: var(--text-primary);
+}
+
+/* ==========================================================================
+   SLIDE 1: COVER
+   ========================================================================== */
+
+.cover-slide {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cover-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+}
+
+.cover-logo-wrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 3vh;
+}
+
+.cover-logo {
+  width: 140px;
+  height: 140px;
+  border-radius: 36px;
+  box-shadow: 0 16px 40px rgba(184, 95, 123, 0.2);
+  border: 4px solid #FFFFFF;
+}
+
+.cover-badge {
+  display: inline-block;
+  background-color: var(--pale-pink);
+  color: var(--rose-primary);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.8vh;
+  border: 1px solid var(--card-border);
+}
+
+.cover-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 4.4rem;
+  font-weight: 800;
+  color: var(--rose-primary);
+  line-height: 1.1;
+  margin-bottom: 1.2vh;
+  letter-spacing: -1px;
+}
+
+.cover-subtitle {
+  font-family: 'Playfair Display', Georgia, italic, serif;
+  font-style: italic;
+  font-size: 1.6rem;
+  color: var(--dusty-rose);
+  margin-bottom: 3.5vh;
+  font-weight: 600;
+}
+
+.cover-description {
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+  max-width: 660px;
+  margin-bottom: 4.5vh;
+}
+
+.cover-meta {
+  display: flex;
+  gap: 3vw;
+  padding: 1.8vh 3vw;
+  background: var(--card-bg);
+  border-radius: 20px;
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-soft);
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.meta-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--dusty-rose);
+}
+
+.meta-value {
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: var(--rose-primary);
+}
+
+/* ==========================================================================
+   SLIDE 2: PROJECT OVERVIEW
+   ========================================================================== */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vw;
+  flex: 1;
+}
+
+.overview-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.overview-icon-box {
+  width: 56px;
+  height: 56px;
+  border-radius: 18px;
+  background: var(--pale-pink);
+  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  margin-bottom: 2vh;
+}
+
+.overview-card ul {
+  list-style: none;
+  margin-top: 1.8vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+
+.overview-card li {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.45;
+}
+
+.overview-card li::before {
+  content: '♡';
+  color: var(--rose-primary);
+  font-weight: bold;
+}
+
+/* ==========================================================================
+   SLIDE 3: DESIGN IDENTITY
+   ========================================================================== */
+
+.design-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2.5vw;
+  flex: 1;
+}
+
+.palette-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2vw;
+  margin-top: 1.5vh;
+}
+
+.swatch-card {
+  background: #FFFFFF;
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(184, 95, 123, 0.06);
+}
+
+.swatch-color {
+  height: 60px;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.swatch-info {
+  padding: 8px 10px;
+  text-align: left;
+}
+
+.swatch-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--rose-primary);
+}
+
+.swatch-hex {
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.principles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vh;
+  margin-top: 1.5vh;
+}
+
+.principle-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: #FFFFFF;
+  padding: 1.2vh 1vw;
+  border-radius: 12px;
+  border: 1px solid var(--card-border);
+}
+
+.principle-bullet {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.principle-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--rose-primary);
+}
+
+.principle-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   SLIDE 4 & 5: SCREENSHOT SHOWCASE
+   ========================================================================== */
+
+.showcase-layout {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 3.5vw;
+  flex: 1;
+  align-items: center;
+}
+
+.dual-showcase-layout {
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  gap: 2.5vw;
+  flex: 1;
+  align-items: center;
+}
+
+/* Phone Mockup Frame */
+.phone-mockup {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 36px;
+  padding: 10px;
+  border: 3.5px solid var(--blush-accent);
+  box-shadow: 0 16px 40px rgba(184, 95, 123, 0.16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone-screen {
+  width: 250px;
+  height: 540px;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  background-color: var(--cream);
+}
+
+.phone-screen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.phone-mockup.small .phone-screen {
+  width: 210px;
+  height: 455px;
+  border-radius: 22px;
+}
+
+.phone-mockup.small {
+  border-radius: 30px;
+  padding: 8px;
+}
+
+.feature-cards-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8vh;
+  justify-content: center;
+}
+
+.feature-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--pale-pink);
+  color: var(--rose-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-right: 6px;
+  margin-top: 6px;
+}
+
+/* Privacy Alert Box */
+.privacy-alert-box {
+  background: #FFF2F6;
+  border: 1.5px dashed var(--dusty-rose);
+  border-radius: 16px;
+  padding: 1.6vh 1.4vw;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 1vh;
+}
+
+.privacy-alert-box .icon {
+  font-size: 1.3rem;
+  color: var(--rose-primary);
+}
+
+.privacy-alert-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--rose-primary);
+  margin-bottom: 2px;
+}
+
+.privacy-alert-text {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   SLIDE 6: TECHNICAL ARCHITECTURE
+   ========================================================================== */
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8vw;
+  flex: 1;
+}
+
+.tech-column-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.tech-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6vh;
+  margin-top: 1vh;
+}
+
+.tech-item-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--rose-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tech-item-text {
+  font-size: 0.86rem;
+  color: var(--text-primary);
+  line-height: 1.48;
+}
+
+.tech-badges-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1.2vh;
+}
+
+.tech-badge {
+  background: var(--pale-pink);
+  color: var(--rose-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--card-border);
+}
+
+/* ==========================================================================
+   SLIDE 7: SUBMISSION & REPOSITORY
+   ========================================================================== */
+
+.submission-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5vw;
+  flex: 1;
+  align-items: stretch;
+}
+
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.repo-url-highlight {
+  background: var(--pale-pink);
+  border: 2px dashed var(--dusty-rose);
+  border-radius: 16px;
+  padding: 2.5vh 2vw;
+  text-align: center;
+  margin: 2vh 0;
+}
+
+.repo-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--dusty-rose);
+  margin-bottom: 0.8vh;
+}
+
+.repo-url-text {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--rose-primary);
+  word-break: break-all;
+  user-select: all;
+}
+
+.checklist-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vh;
+  margin-top: 1.5vh;
+}
+
+.checklist-card li {
+  font-size: 0.88rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.check-icon {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--pale-pink);
+  color: var(--rose-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  border: 1px solid var(--card-border);
+}
+
+/* ==========================================================================
+   PRINT / PDF MEDIA QUERY
+   Exact 16:9 Landscape Dimensions — No Margins, No Headers/Footers
+   ========================================================================== */
+
+@page {
+  size: 16in 9in;
+  margin: 0;
+}
+
+@media print {
+  html, body {
+    width: 16in;
+    height: 9in;
+    background-color: var(--cream) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .slide {
+    width: 16in !important;
+    height: 9in !important;
+    min-height: 9in !important;
+    max-height: 9in !important;
+    page-break-after: always !important;
+    page-break-inside: avoid !important;
+    break-after: page !important;
+    padding: 0.6in 0.8in !important;
+  }
+}
