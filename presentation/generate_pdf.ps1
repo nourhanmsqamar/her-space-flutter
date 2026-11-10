@@ -1,4 +1,4 @@
-# ==============================================================================
+﻿# ==============================================================================
 # Her Space — Academic Presentation PDF Generator
 # ==============================================================================
 # This script reads presentation/config.json and generates the 16:9 landscape
@@ -36,8 +36,16 @@ Write-Host "Repository URL: $repoUrl" -ForegroundColor Cyan
 
 # 3. Synchronize repository URL in index.html if needed
 $htmlContent = Get-Content $htmlPath -Raw -Encoding UTF8
-$pattern = 'id="repo-url-display">([^<]*)<(?:span|div)>'
-if ($htmlContent -match 'id="repo-url-display">([^<]*)<') {
+$linkPattern = 'href="([^"]*)"\s+class="[^"]*"\s+id="repo-url-display"[^>]*>([^<]*)</a>'
+if ($htmlContent -match $linkPattern) {
+    $currentHref = $matches[1]
+    $currentText = $matches[2]
+    if ($currentHref -ne $repoUrl -or $currentText -ne $repoUrl) {
+        Write-Host "Updating repository URL in index.html to: $repoUrl" -ForegroundColor Yellow
+        $newHtml = [regex]::Replace($htmlContent, 'href="[^"]*"(?<mid>[^>]*id="repo-url-display"[^>]*)>[^<]*</a>', "href=`"$repoUrl`"`${mid}>$repoUrl</a>")
+        Set-Content -Path $htmlPath -Value $newHtml -Encoding UTF8
+    }
+} elseif ($htmlContent -match 'id="repo-url-display">([^<]*)<') {
     $currentUrlInHtml = $matches[1]
     if ($currentUrlInHtml -ne $repoUrl) {
         Write-Host "Updating repository URL in index.html to: $repoUrl" -ForegroundColor Yellow

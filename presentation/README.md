@@ -49,22 +49,20 @@ presentation/
 
 ---
 
-## Updating the GitHub Repository URL
+## GitHub Repository Configuration
 
 The repository URL is maintained centrally in `presentation/config.json`:
 
 ```json
 {
   "projectName": "Her Space",
-  "repositoryUrl": "REPOSITORY_URL_TO_BE_ADDED"
+  "repositoryUrl": "https://github.com/nourhanmsqamar/her-space-flutter"
 }
 ```
 
-### Steps to Update & Regenerate:
+### Steps to Regenerate Presentation:
 
-1. Open `presentation/config.json`.
-2. Replace `"REPOSITORY_URL_TO_BE_ADDED"` with your actual GitHub repository URL (e.g. `"https://github.com/USERNAME/her-space-flutter"`).
-3. In PowerShell, run the generator script:
+In PowerShell, run the generator script:
 
 ```powershell
 .\presentation\generate_pdf.ps1
@@ -72,7 +70,9 @@ The repository URL is maintained centrally in `presentation/config.json`:
 
 The script will automatically:
 - Read `config.json`.
-- Synchronize the repository URL into `index.html`.
+- Synchronize the repository URL into `index.html` as a clickable hyperlink (`<a>` tag).
+- Launch headless Chrome / Edge to re-render the presentation.
+- Overwrite `presentation/Her_Space_Project_Presentation.pdf` with the updated clickable link annotation on Slide 7.
 - Launch headless Chrome / Edge to re-render the presentation.
 - Overwrite `presentation/Her_Space_Project_Presentation.pdf` with the updated URL on Slide 7.
 

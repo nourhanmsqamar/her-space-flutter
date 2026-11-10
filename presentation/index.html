@@ -584,8 +584,8 @@
 
             <div class="repo-url-highlight">
               <div class="repo-label">Official GitHub Repository URL</div>
-              <div class="repo-url-text" id="repo-url-display">REPOSITORY_URL_TO_BE_ADDED</div>
-              <div class="repo-url-note">Single source of truth: presentation/config.json • Updated upon publication</div>
+              <a href="https://github.com/nourhanmsqamar/her-space-flutter" class="repo-url-link" id="repo-url-display" target="_blank" rel="noopener noreferrer">https://github.com/nourhanmsqamar/her-space-flutter</a>
+              <div class="repo-url-note">Official public repository on GitHub • Clickable link</div>
             </div>
 
             <div class="checklist-card">
@@ -620,7 +620,7 @@
 
           <div class="terminal-command-box">
             <span style="font-size: 0.72rem; font-weight: 700; color: var(--dusty-rose); text-transform: uppercase;">Run:</span>
-            <span class="terminal-command-code">git clone &lt;repo-url&gt; &amp;&amp; cd her_space &amp;&amp; flutter run</span>
+            <span class="terminal-command-code">git clone https://github.com/nourhanmsqamar/her-space-flutter.git &amp;&amp; cd her_space &amp;&amp; flutter run</span>
           </div>
         </div>
       </div>
@@ -637,12 +637,15 @@
             const displayEl = document.getElementById('repo-url-display');
             if (displayEl) {
               displayEl.textContent = config.repositoryUrl;
+              if (displayEl.tagName === 'A') {
+                displayEl.href = config.repositoryUrl;
+              }
             }
           }
         })
         .catch(err => {
           // If running locally without a web server, fallback to default in HTML
-          console.log('Using default repository URL config placeholder.');
+          console.log('Using default repository URL config.');
         });
     })();
   </script>
