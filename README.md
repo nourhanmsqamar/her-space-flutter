@@ -47,10 +47,6 @@ All screenshots below are captured directly from the live application running on
 
 </div>
 
-> [!NOTE]
-> **Privacy Consideration Before Public Publication:**
-> The contact screen currently displays personal academic demo data (Email: `NorhanQamar@gmail.com`, Phone: `01020304050`, Location: `Kafrelshiekh, Egypt`). If publishing this repository to a public GitHub profile, review and sanitize `lib/data/profile_data.dart` if you wish to keep personal contact information private.
-
 ---
 
 ## Features
